@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetic Retinopathy Detection</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="imageUpload">Upload Retina Fundus Image:</label>
+            <input type="file" id="imageUpload" name="image" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result">
+            <h2>Predictions:</h2>
+            <p>KNN Prediction: <span id="knn-result"></span></p>
+            <p>SVM Prediction: <span id="svm-result"></span></p>
+            <p>CNN Prediction: <span id="cnn-result"></span></p>
+            <h3>Ensemble Prediction: <span id="ensemble-result"></span></h3>
+        </div>
+    </div>
+    <div id="picture">
+        <img src="/static/images/pic1.png" alt="Different Levels detected: Normal, Mild DR, Moderate DR, Severe DR, Poliferate DR"/>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
